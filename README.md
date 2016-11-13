@@ -4,4 +4,4 @@ Documentation :
 app/      -source
 dist/     -production
 ```
-***Fonts was changed, because Muller/VisbyCF not found.***
+***Fonts were changed, because Muller/VisbyCF were not found.***
