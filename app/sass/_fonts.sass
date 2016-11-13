@@ -1,0 +1,26 @@
+@mixin font-face($font-family, $file-path, $font-weight, $font-style)
+	@font-face
+		font-family: $font-family
+		src: url('#{$file-path}.eot')
+		src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+		url('#{$file-path}.ttf') format('truetype'),
+		url('#{$file-path}.svg##{$font-family}') format('svg')
+		font-weight: $font-weight
+		font-style: $font-style
+
+@include font-face('Icons', '../fonts/icons/icons', 300, normal)
+@include font-face('Roboto Light', '../fonts/roboto/Roboto-Light', 300, normal)
+@include font-face('Roboto Bold', '../fonts/roboto/Roboto-Bold', 600, bold)
+
+[class^="icon-"], [class*=" icon-"]
+	font-family: 'Icons' !important
+	speak: none
+	font-style: normal
+	font-weight: normal
+	font-variant: normal
+	text-transform: none
+	line-height: 1
+.icon-arrow:before
+	content: "\e900"
+.icon-heart:before
+	content: "\e901"
